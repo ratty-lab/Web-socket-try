@@ -3,7 +3,7 @@
 import express from "express";
 import http from 'http';
 import { Server} from 'socket.io';
-import dotenv from 'dotenv'
+
 
 const app=express();
 const server=http.createServer(app);
@@ -37,7 +37,7 @@ io.on('connection',(socket)=>{
     })
     
 })
-server.listen( process.env.PORT || 5000,()=>{
-    console.log('server is running at port 3000');
+server.listen(5000,()=>{
+    console.log('server is running at port 5000');
     
 })
