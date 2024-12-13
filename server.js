@@ -3,7 +3,7 @@
 import express from "express";
 import http from 'http';
 import { Server} from 'socket.io';
-
+import dotenv from 'dotenv'
 
 const app=express();
 const server=http.createServer(app);
@@ -19,9 +19,11 @@ app.get("/",(req,res)=>{
 })
 io.on('connection',(socket)=>{
     socket.on('adduser',(username)=>{
-        
         users[socket.id]= username;
         
+        if(users[socket.id].username===''){
+            users[socket.id].username='Anonymous';
+        }
         console.log(users);
         
         
@@ -37,7 +39,7 @@ io.on('connection',(socket)=>{
     })
     
 })
-server.listen(5000,()=>{
-    console.log('server is running at port 5000');
+server.listen( 3000,()=>{
+    console.log('server is running at port 3000');
     
 })
