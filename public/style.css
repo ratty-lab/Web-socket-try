@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 85% 15%;
+    
+}
+#messaged{
+    margin: 0px;
+    padding:0px;
+    
+    background-color: #A6C7EB;
+    overflow-y: scroll;
+    grid-column: span 2;
+}
+#messaged p{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-top: 0px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    
+}
+input{
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    border:2px #007bff solid;
+    margin-top: 2%;
+    margin-left:5% ;
+}
+ button{
+    width:60%;
+    height: 60px;
+    background-color: #007bff;  /* blue background */
+color: #ffffff;  /* white text */
+
+    border-radius: 40px;
+    border:2px #007bff solid;
+    margin-top: 8%;
+    margin-left:5% ;
+    font-weight: bold;
+    font-size: 16px;
+}
+.newUser{
+    font-size: 30px;
+    color: red;
+}
